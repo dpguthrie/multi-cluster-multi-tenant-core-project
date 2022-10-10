@@ -5,7 +5,7 @@ sources:
   - name: tpch
     description: '{{ doc("tpch_source") }}'
     database: doug_demo_v2
-    schema: tpch
+    schema: '{{ var("tpch_schema", "tpch") }}'
     freshness:
       warn_after: {count: 24, period: hour}
       error_after: {count: 48, period: hour}
